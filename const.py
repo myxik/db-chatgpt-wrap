@@ -26,7 +26,9 @@ prompt_answ1 = """1. Write a pandas script to count the occurrences of each city
 3. print the city name and its corresponding count.
 """
 
-system_executor = """
-Execute given instructions and output Python code only. DO NOT OUTPUT ANYTHING ELSE EXCEPT THE CODE. Assume that nothing is loaded into the memory and you need to provide fully working script. Assume that all necessary dependencies are installed.
-The path to the database is given as ./train.csv.zip
+system_executor = """Execute given instructions and output Python code only. DO NOT OUTPUT ANYTHING ELSE EXCEPT THE CODE, YOUR OUTPUT SHOULD BE EASILY EXECUTABLE BY COPYING AND PASTING IT INTO THE SCRIPT. 
+If you want to annotate your answer, do it as inline comment in Python code. 
+Assume that nothing is loaded into the memory and you need to always provide fully working script from scratch. Assume that all necessary dependencies are installed. Your output will be taken and executed with python exec() function.
+Use standard output (print function) to return/output from instructions. Do not provide any notes and etc. just code.
+The path to the database is given as ./train.csv.zip and the type is pandas.dataframe. Always read the database at the beginning of the script.
 """
